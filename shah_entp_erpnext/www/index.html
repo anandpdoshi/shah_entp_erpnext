@@ -1,0 +1,93 @@
+<!-- title: Shah Enterprises -->
+
+<div class='home-wrapper text-center'>
+	<p class='lead'>Search the range of 150,000 chemical products</p>
+
+	<div class="product-search">
+		<form class="form-inline form-search">
+	    	<div class="input-group input-group-lg">
+	    		<input class="form-control" type="text" id="product-search"
+	                placeholder="Search for Chemicals or Impurities...">
+	    		<span class="input-group-btn">
+	    			<button class="btn btn-lg btn-default" type="button" id="btn-product-search">
+	    				<i class="icon-search"></i></button>
+	    		</span>
+	    	</div>
+	    </form>
+	</div>
+
+
+	<hr class='col-xs-12'>
+
+	<div class="why-source-from-us">
+
+		<h1>Why source from us?</h1>
+
+		<div class='row'>
+			<div class='col-sm-4'>
+				<h4>Quality Assurance</h4>
+				<p>
+					We deliver consistent quality with every order.
+					Our products are sourced from trusted partners from USA, UK, Japan and China.
+				</p>
+			</div>
+			<div class='col-sm-4'>
+				<h4>Timely Delivery</h4>
+				<p>
+					We are committed to on-time delivery.
+					We do our best to ensure that all orders arrive within the estimated timeline.
+				</p>
+			</div>
+			<div class='col-sm-4'>
+				<h4>Competitive Pricing</h4>
+				<p>
+					Your trust is our greatest asset and we aim for long-term relationships.
+					Hence, we strive to provide competitive pricing.
+				</p>
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='col-sm-4'>
+				<h4>Exhaustive Range</h4>
+				<p>
+					Currently our portfolio has over 150,000 products. Additionally, we provide custom synthesis service as per your requirements.
+				</p>
+			</div>
+			<div class='col-sm-4'>
+				<h4>Technical Support</h4>
+				<p>
+					Service is what differentiates us from our competitors.
+					We ensure that you get technical help whenever you need it.
+				</p>
+			</div>
+			<div class='col-sm-4'>
+				<h4>Worldwide Shipments</h4>
+				<p>
+					We ship to all countries across the globe.
+					We aim to be your trusted sourcing partner from India.
+				</p>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script>
+frappe.ready(function() {
+	$("#btn-product-search").click(function() {
+		var txt = $("#product-search").val();
+		if(txt) {
+			window.location.href="/product_search?q=" + txt;
+		}
+		return false;
+	});
+	$("#product-search").keypress(function(e) {
+		if(e.which==13) $("#btn-product-search").click();
+	}).focus();
+	$(".form-search").on("submit", function() { return false; });
+
+});
+</script>
+

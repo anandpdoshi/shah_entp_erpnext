@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include shah_entp_erpnext *.css
+recursive-include shah_entp_erpnext *.csv
+recursive-include shah_entp_erpnext *.html
+recursive-include shah_entp_erpnext *.ico
+recursive-include shah_entp_erpnext *.js
+recursive-include shah_entp_erpnext *.json
+recursive-include shah_entp_erpnext *.md
+recursive-include shah_entp_erpnext *.png
+recursive-include shah_entp_erpnext *.py
+recursive-include shah_entp_erpnext *.svg
+recursive-include shah_entp_erpnext *.txt
+recursive-exclude shah_entp_erpnext *.pyc

@@ -1,0 +1,32 @@
+{% set thumbnail = website_image %}
+
+{% from "erpnext/templates/includes/macros.html" import product_image_square %}
+{% set show_image = True if item_group=='Impurities' else False %}
+
+<a class="product-link product-list-link {% if show_image %} with-image {% else %} without-image {% endif %}"
+	href="{{ (route or page_name)|abs_url }}">
+	<div class='row'>
+		{% if show_image %}
+		<div class='col-xs-3 col-sm-2 product-image-wrapper'>
+			{{ product_image_square(thumbnail or website_image) }}
+		</div>
+		<div class='col-xs-9 col-sm-10 text-left'>
+			<div class="text-ellipsis product-text strong">{{ item_name }}</div>
+			{% set website_description = website_description or description %}
+			{% if website_description != item_name %}
+				<div class="text-ellipsis text-muted">{{ website_description or description }}</div>
+			{% elif item_code != item_name %}
+				<div class="text-ellipsis text-muted">CAS No. <span class='label label-default'>{{ item_code }}</span></div>
+			{% endif %}
+		</div>
+		{% else %}
+		<div class='col-xs-8 text-left'>
+			<div class="text-ellipsis product-text strong">{{ item_name }}</div>
+		</div>
+		<div class='col-xs-4 text-left'>
+			<div class="text-ellipsis text-muted cas-no">CAS No. <span class='label label-default'>{{ item_code }}</span></div>
+		</div>
+		{% endif %}
+	</div>
+</a>
+

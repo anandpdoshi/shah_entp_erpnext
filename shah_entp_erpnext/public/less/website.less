@@ -1,0 +1,167 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,900,900italic&subset=latin,latin-ext);
+
+@red: #AD495E;
+@blue: #415A72;
+@text-muted: #8D99A6;
+@light-border-color: #EBEFF2;
+@light-bg: #fafbfc;
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: @blue;
+	line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: @blue;
+	font-weight: 900;
+}
+
+hr {
+	border-color: @light-border-color;
+}
+
+.navbar .navbar-text&,
+.navbar .navbar-brand&,
+.navbar .navbar-link&,
+.navbar .nav > li > a&,
+a& {
+	color: @blue;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: @red;
+	}
+}
+
+.container {
+	max-width: 800px !important;
+}
+
+.product-image-square {
+	background-size: contain;
+	background-position: center center;
+	border: none;
+}
+
+.with-image .product-text {
+	padding-top: 23px;
+}
+
+.without-image {
+	.cas-no {
+		padding-top: 15px;
+	}
+}
+
+.navbar {
+	padding: 0px;
+	border-bottom: none;
+}
+
+.navbar-header {
+	// float: none;
+}
+
+.navbar-brand {
+	display: inline-block;
+	margin-top: 5px;
+}
+
+.navbar-icon {
+	max-width: 80px;
+	margin-top: -15px;
+}
+
+.navbar-brand-text {
+	font-family: 'League Spartan', sans-serif;
+	font-size: 1.8em;
+	// vertical-align: middle;
+	display: inline-block;
+
+	.red {
+		color: @red;
+	}
+
+	.blue {
+		color: @blue;
+	}
+}
+
+.navbar-items {
+	padding-top: 30px;
+}
+
+.home-wrapper {
+	padding: 30px 0px;
+
+	.lead {
+		margin-top: 90px;
+	}
+
+	.product-search {
+		margin-bottom: 60px;
+
+		.input-group {
+			width: 75%;
+
+			.form-control {
+				font-size: 16px;
+			}
+
+		}
+
+		.input-group-btn {
+			width: 30px;
+		}
+	}
+
+	.why-source-from-us {
+		padding-top: 60px;
+
+		.row > div {
+			padding: 30px 15px;
+		}
+
+		h4 {
+			color: @red;
+		}
+	}
+}
+
+button.btn-default&,
+button.btn-primary& {
+	background-color: transparent;
+	border-color: @blue;
+	color: @blue;
+	font-weight: inherit;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: @light-bg;
+		border-color: @blue;
+		color: @blue;
+		font-weight: inherit;
+	}
+}
+
+.input-group {
+	.form-control {
+		border-color: @blue;
+	}
+}
+
+.label-default {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+.footer-links .row:nth-child(2) .col-sm-8 {
+	float: none;
+	width: 100%;
+	text-align: center;
+}

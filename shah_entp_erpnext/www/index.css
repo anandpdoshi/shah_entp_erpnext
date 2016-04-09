@@ -1,0 +1,3 @@
+.page-content-wrapper > div:first-child {
+	display: none;
+}
