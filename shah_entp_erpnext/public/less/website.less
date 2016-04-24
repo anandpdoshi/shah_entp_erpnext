@@ -41,6 +41,16 @@ a& {
 	max-width: 800px !important;
 }
 
+.content-block {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.toggle-sidebar {
+	padding-top: 30px;
+	padding-right: 30px;
+}
+
 .product-image-square {
 	background-size: contain;
 	background-position: center center;
@@ -69,30 +79,34 @@ a& {
 .navbar-brand {
 	display: inline-block;
 	margin-top: 5px;
+	overflow: visible !important;
 }
 
 .navbar-icon {
-	max-width: 80px;
-	margin-top: -15px;
+	max-width: none;
+    width: 360px;
+    margin-top: -38px;
+	margin-left: -30px;
+    margin-right: -30px;
 }
 
-.navbar-brand-text {
-	font-family: 'League Spartan', sans-serif;
-	font-size: 1.8em;
-	// vertical-align: middle;
-	display: inline-block;
-
-	.red {
-		color: @red;
-	}
-
-	.blue {
-		color: @blue;
-	}
-}
+// .navbar-brand-text {
+// 	font-family: 'League Spartan', sans-serif;
+// 	font-size: 1.8em;
+// 	// vertical-align: middle;
+// 	display: inline-block;
+//
+// 	.red {
+// 		color: @red;
+// 	}
+//
+// 	.blue {
+// 		color: @blue;
+// 	}
+// }
 
 .navbar-items {
-	padding-top: 30px;
+	padding-top: 24px;
 }
 
 .home-wrapper {
@@ -104,6 +118,7 @@ a& {
 
 	.product-search {
 		margin-bottom: 60px;
+		padding: 0px 30px;
 
 		.input-group {
 			width: 75%;
@@ -164,4 +179,14 @@ button.btn-primary& {
 	float: none;
 	width: 100%;
 	text-align: center;
+}
+
+@media (max-width: 767px) {
+	.home-wrapper {
+		.product-search {
+			.input-group {
+				width: 100%;
+			}
+		}
+	}
 }

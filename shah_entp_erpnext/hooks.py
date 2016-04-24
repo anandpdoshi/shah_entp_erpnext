@@ -21,7 +21,7 @@ app_license = "MIT"
 # include js, css files in header of web template
 web_include_css = [
 	"/assets/shah_entp_erpnext/css/website.css",
-	"/assets/shah_entp_erpnext/fonts/leaguespartan/stylesheet.css",
+	# "/assets/shah_entp_erpnext/fonts/leaguespartan/stylesheet.css",
 ]
 # web_include_js = "/assets/shah_entp_erpnext/js/shah_entp_erpnext.js"
 
